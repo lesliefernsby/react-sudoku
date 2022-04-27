@@ -1,0 +1,11 @@
+.Cell {
+  width: 5rem;
+  height: 5rem;
+  border: solid black 1px;
+  margin: 5px;
+  padding: 5px;
+  flex-direction: row;
+}
+
+.Value {
+}
