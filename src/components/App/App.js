@@ -29,8 +29,13 @@ function App() {
     setGame(Object.assign(Object.create(Object.getPrototypeOf(game)), game)); //created a copy of the Game for the state to update, don't like it
    }
 
-   function handleNakedTwins() {
+  function handleNakedTwins() {
     game.nakedTwinElimination();
+    setGame(Object.assign(Object.create(Object.getPrototypeOf(game)), game)); //created a copy of the Game for the state to update, don't like it
+  }
+
+  function handleNakedTriples() {
+    game.nakedTriplesElimination();
     setGame(Object.assign(Object.create(Object.getPrototypeOf(game)), game)); //created a copy of the Game for the state to update, don't like it
   }
 
@@ -51,6 +56,7 @@ function App() {
       <button onClick={handleCalculateCandidates}>Calculate candidates</button>
       <button onClick={handleUniqueCandidateInRowColumnOrSquare}>Find LONERS in a row/column/square</button>
       <button onClick={handleNakedTwins}>Find naked twins</button>
+      <button onClick={handleNakedTriples}>Find naked triples</button>
       <button onClick={handleApproveSingleCandidates}>Approve single candidates</button>
 
       <button onClick={handleValid}>CHECK IF THE GAME IS VALID</button>
